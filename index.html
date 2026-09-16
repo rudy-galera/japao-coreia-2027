@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Japão & Coreia 2027</title>
+<meta name="description" content="Rudy & Marcela — Seul, Tóquio, Hakone, Kyoto, Osaka · maio 2027">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗾</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf7f2;--card:#ffffff;--ink:#1d1b19;--mute:#6b645c;--line:#e7e0d6;
+  --kr:#2f5fa8;--tk:#c8453a;--mk:#8a6a3f;--hk:#3f7d62;--ky:#8e4a8c;--os:#d07a1c;
+  --accent:#c8453a;--soft:#f3ece2;--done:#3f7d62;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#141312;--card:#1d1c1a;--ink:#f1ede7;--mute:#a79f95;--line:#302d29;
+  --kr:#6f9be0;--tk:#ec7a6f;--mk:#c9a26b;--hk:#71b595;--ky:#c686c4;--os:#eaa257;
+  --accent:#ec7a6f;--soft:#26231f;--done:#71b595;}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px 64px}
+header{padding:48px 0 24px}
+.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+h1{font-family:"Noto Serif JP",serif;font-size:clamp(34px,6vw,54px);line-height:1.05;margin:8px 0 10px}
+h1 span{color:var(--accent)}
+.sub{color:var(--mute);max-width:620px}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding:10px 0}
+nav a{white-space:nowrap;text-decoration:none;color:var(--ink);font-weight:500;font-size:13px;padding:7px 12px;border:1px solid var(--line);border-radius:99px;background:var(--card)}
+nav a:hover{border-color:var(--accent)}
+section{padding-top:36px}
+h2{font-size:22px;margin:0 0 4px}
+.lede{color:var(--mute);margin:0 0 18px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:22px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.tile b{display:block;font-size:26px;line-height:1.1}
+.tile small{color:var(--mute)}
+/* route bar */
+.route{display:flex;border-radius:12px;overflow:hidden;height:46px;margin:6px 0 8px;border:1px solid var(--line)}
+.route div{display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:600;text-align:center;padding:0 4px;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--mute)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+/* days */
+.days{display:grid;gap:10px}
+.day{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--c);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:88px 1fr;gap:14px}
+.day .d{font-size:12px;color:var(--mute)}
+.day .d b{display:block;font-size:20px;color:var(--ink)}
+.day h3{margin:0 0 4px;font-size:16px}
+.day h3 em{font-style:normal;font-size:11px;font-weight:600;color:var(--c);text-transform:uppercase;letter-spacing:.08em;margin-left:6px}
+.day ul{margin:4px 0 0;padding-left:18px}
+.day li{margin:2px 0}
+.tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:99px;background:var(--soft);color:var(--mute);margin:6px 4px 0 0}
+.tag.star{color:var(--accent)}
+.stay{font-size:12px;color:var(--mute);margin-top:6px}
+/* prep timeline */
+.phase{display:grid;grid-template-columns:120px 1fr;gap:16px;position:relative;padding-bottom:18px}
+.phase:before{content:"";position:absolute;left:119px;top:6px;bottom:0;width:2px;background:var(--line)}
+.phase:last-child:before{display:none}
+.when{font-weight:600;font-size:13px;text-align:right;padding-right:14px}
+.when small{display:block;font-weight:400;color:var(--mute)}
+.phase .items{position:relative}
+.phase .items:before{content:"";position:absolute;left:-22px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--bg)}
+.task{display:flex;gap:10px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 12px;margin-bottom:6px;cursor:pointer}
+.task input{margin-top:4px;accent-color:var(--done);width:16px;height:16px;flex:none}
+.task.done{opacity:.55}
+.task.done .t{text-decoration:line-through}
+.task .t{font-weight:600}
+.task .n{color:var(--mute);font-size:13px}
+.crit{color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.06em;margin-left:6px}
+.progress{height:8px;background:var(--soft);border-radius:99px;overflow:hidden;margin:4px 0 20px}
+.progress div{height:100%;background:var(--done);width:0;transition:width .3s}
+/* grid cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.card h4{margin:0 0 6px;font-size:14px}
+.card p,.card ul{margin:0;font-size:13.5px;color:var(--mute)}
+.card ul{padding-left:18px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--mute);font-weight:600;background:var(--soft)}
+.ok{color:var(--done);font-weight:600}.warn{color:var(--accent);font-weight:600}
+.tablewrap{overflow-x:auto}
+footer{margin-top:40px;color:var(--mute);font-size:12px}
+@media (max-width:620px){
+  .day{grid-template-columns:1fr;gap:4px}.day .d b{display:inline;margin-right:6px}
+  .phase{grid-template-columns:1fr}.phase:before,.phase .items:before{display:none}.when{text-align:left;padding:0 0 6px}
+  .route div{font-size:10px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">Rudy & Marcela · Rascunho v2 · atualizado em 16 set 2026</div>
+  <h1>Seul → Tóquio → <span>Hakone</span> → Kyoto → Osaka</h1>
+  <p class="sub">Duas semanas em meados de maio de 2027: depois da Golden Week e antes da temporada de chuvas de junho. 3 noites na Coreia, 11 no Japão, com sushi omakase e Kobe beef certificado no roteiro.</p>
+  <div class="tiles">
+    <div class="tile"><b>7–22 mai</b><small>sex a sáb · 2027</small></div>
+    <div class="tile"><b>14 noites</b><small>3 Coreia · 11 Japão</small></div>
+    <div class="tile"><b>5 bases</b><small>Seul · Tóquio · Hakone · Kyoto · Osaka</small></div>
+    <div class="tile"><b>~20°C</b><small>clima ameno, pouca chuva</small></div>
+  </div>
+</header>
+
+<nav>
+  <a href="#rota">Rota</a><a href="#dias">Dia a dia</a><a href="#comida">Omakase & Kobe</a><a href="#prep">Preparação & prazos</a><a href="#docs">Entrada</a><a href="#dicas">Dicas</a>
+</nav>
+
+<section id="rota">
+  <h2>A rota</h2>
+  <p class="lede">Largura = noites em cada lugar. Coreia primeiro (voo curto até Tóquio), volta para Dubai saindo de Osaka.</p>
+  <div class="route">
+    <div style="flex:3;background:var(--kr)">Seul 3</div>
+    <div style="flex:4;background:var(--tk)">Tóquio 4</div>
+    <div style="flex:1;background:var(--hk)">Hakone 1</div>
+    <div style="flex:3;background:var(--ky)">Kyoto 3</div>
+    <div style="flex:3;background:var(--os)">Osaka 3</div>
+  </div>
+  <div class="legend">
+    <span><i style="background:var(--kr)"></i>DXB → ICN (Emirates)</span>
+    <span><i style="background:var(--tk)"></i>GMP → HND, 2h15</span>
+    <span><i style="background:var(--hk)"></i>Romancecar, 85 min</span>
+    <span><i style="background:var(--ky)"></i>Shinkansen via Odawara, ~2h</span>
+    <span><i style="background:var(--os)"></i>Trem 15–30 min · KIX → DXB</span>
+  </div>
+</section>
+
+<section id="dias">
+  <h2>Dia a dia</h2>
+  <p class="lede">Um passeio âncora por dia; o resto é andar e comer. ★ = precisa reservar.</p>
+  <div class="days">
+
+    <div class="day" style="--c:var(--kr)"><div class="d"><b>Sex 7</b>mai</div><div>
+      <h3>Dubai → Seul <em>Viagem</em></h3>
+      <ul><li>Voo noturno da Emirates para Incheon. Deixar o Duncan no Petsville (DIP) antes de ir para o aeroporto.</li></ul></div></div>
+
+    <div class="day" style="--c:var(--kr)"><div class="d"><b>Sáb 8</b>mai</div><div>
+      <h3>Chegada · Myeongdong & Namsan <em>Seul</em></h3>
+      <ul><li>Trem AREX até a cidade, check-in, cochilo.</li>
+      <li>Pôr do sol na N Seoul Tower e jantar de churrasco coreano.</li></ul>
+      <div class="stay">Hospedagem: Myeongdong / Jung-gu (central, ônibus do aeroporto, dá pra fazer tudo a pé)</div></div></div>
+
+    <div class="day" style="--c:var(--kr)"><div class="d"><b>Dom 9</b>mai</div><div>
+      <h3>Palácios, vielas hanok e noite em Hongdae <em>Seul</em></h3>
+      <ul><li>Gyeongbokgung (troca da guarda) → Bukchon Hanok Village → cafés de Ikseon-dong.</li>
+      <li>Almoço no Gwangjang Market.</li>
+      <li>À noite: Hongdae, com música de rua, grupos de dança e bares.</li></ul></div></div>
+
+    <div class="day" style="--c:var(--kr)"><div class="d"><b>Seg 10</b>mai</div><div>
+      <h3>Seongsu, rio Han & K-beauty <em>Seul</em></h3>
+      <ul><li>Seongsu-dong: lojas de design e pop-ups (visual merchandising de primeira).</li>
+      <li>Olive Young / Garosu-gil, piquenique e bike no rio Han ao entardecer.</li></ul>
+      <span class="tag">Opcional: meio dia na DMZ</span></div></div>
+
+    <div class="day" style="--c:var(--tk)"><div class="d"><b>Ter 11</b>mai</div><div>
+      <h3>Seul → Tóquio · noite em Shinjuku <em>Tóquio</em></h3>
+      <ul><li>Voo de manhã, Gimpo → Haneda (o trajeto mais rápido entre as duas cidades).</li>
+      <li>À noite: Godzilla Head → Omoide Yokocho → Golden Gai. Ichiran se a fila estiver curta.</li></ul>
+      <div class="stay">Hospedagem: Shinjuku (perto de Kabukicho, melhor hub de trens)</div></div></div>
+
+    <div class="day" style="--c:var(--tk)"><div class="d"><b>Qua 12</b>mai</div><div>
+      <h3>Tsukiji · teamLab <em>Tóquio</em></h3>
+      <ul><li>Manhã no Tsukiji Outer Market: o terraço de churrasco e a loja de saquê da dica do amigo.</li>
+      <li>Tarde: teamLab Planets ★ (horário marcado).</li>
+      <li>Jantar: Tonkatsu Marushichi (confirmar se está aberto).</li></ul>
+      <span class="tag star">★ ingressos teamLab</span><span class="tag">Leilão de atum de Toyosu: só se o calendário permitir (fecha dom e algumas qua)</span></div></div>
+
+    <div class="day" style="--c:var(--tk)"><div class="d"><b>Qui 13</b>mai</div><div>
+      <h3>Asakusa, Ginza & sushi omakase <em>Splurge #1</em></h3>
+      <ul><li>Manhã: templo Senso-ji e Nakamise em Asakusa, passeio de barco pelo rio Sumida.</li>
+      <li>Tarde: Ginza, com arquitetura, lojas de departamento e o food hall do Mitsukoshi.</li>
+      <li>Jantar: <b>sushi omakase no balcão em Ginza</b> ★</li></ul>
+      <span class="tag star">★ omakase: reservar 30–60 dias antes</span></div></div>
+
+    <div class="day" style="--c:var(--tk)"><div class="d"><b>Sex 14</b>mai</div><div>
+      <h3>Shibuya, Harajuku & Nonbei Yokocho <em>Tóquio</em></h3>
+      <ul><li>Santuário Meiji → arquitetura de Omotesando → cruzamento de Shibuya e Hachiko.</li>
+      <li>Shibuya Sky no pôr do sol ★. Jantar no Rakeru e drinks no Nonbei Yokocho.</li></ul>
+      <span class="tag star">★ Shibuya Sky no pôr do sol</span><span class="tag">Opção Rudy: encontro de carros no Daikoku PA (sex à noite)</span></div></div>
+
+    <div class="day" style="--c:var(--hk)"><div class="d"><b>Sáb 15</b>mai</div><div>
+      <h3>Hakone: vista do Fuji & ryokan <em>Splurge #2</em></h3>
+      <ul><li>Mandar as malas direto para o hotel de Kyoto (takkyubin) e viajar leve.</li>
+      <li>Romancecar de Shinjuku → circuito de Hakone: teleférico de Owakudani, barco no lago Ashi, Open-Air Museum.</li>
+      <li>Ryokan com onsen privativo e jantar kaiseki ★.</li></ul>
+      <span class="tag star">★ ryokan: esgota cedo</span></div></div>
+
+    <div class="day" style="--c:var(--ky)"><div class="d"><b>Dom 16</b>mai</div><div>
+      <h3>Hakone → Kyoto · noite em Gion <em>Kyoto</em></h3>
+      <ul><li>Manhã tranquila no onsen, Shinkansen saindo de Odawara.</li>
+      <li>À noite: viela de Pontocho, Gion e Hanamikoji ao entardecer.</li></ul>
+      <div class="stay">Hospedagem: Kawaramachi / Gion</div></div></div>
+
+    <div class="day" style="--c:var(--ky)"><div class="d"><b>Seg 17</b>mai</div><div>
+      <h3>Fushimi Inari de madrugada · Higashiyama <em>Kyoto</em></h3>
+      <ul><li>Fushimi Inari até as 7h (portões vazios) e trilha até os santuários do alto.</li>
+      <li>Kiyomizu-dera → Sannenzaka → Yasaka. Cerimônia do chá ★.</li>
+      <li>Jantar: <b>segundo omakase</b>, sushi ou kappo no estilo de Kyoto ★</li></ul>
+      <span class="tag star">★ omakase Kyoto</span></div></div>
+
+    <div class="day" style="--c:var(--ky)"><div class="d"><b>Ter 18</b>mai</div><div>
+      <h3>Arashiyama & natureza <em>Kyoto</em></h3>
+      <ul><li>Bambuzal cedo, jardim do Tenryu-ji, vila Okochi Sanso.</li>
+      <li>Barco no rio Hozugawa ou trem Sagano; Kinkaku-ji na volta.</li>
+      <li>Aula de culinária (sushi/wagyu) à noite.</li></ul></div></div>
+
+    <div class="day" style="--c:var(--os)"><div class="d"><b>Qua 19</b>mai</div><div>
+      <h3>Cervos de Nara → Osaka <em>Osaka</em></h3>
+      <ul><li>Manhã em Nara (Todai-ji, parque dos cervos), no caminho para Osaka.</li>
+      <li>À noite: luzes de Dotonbori e Namba, izakayas. Chibo okonomiyaki ("pede o completão").</li></ul>
+      <div class="stay">Hospedagem: Namba / Shinsaibashi (volta a pé da noite)</div></div></div>
+
+    <div class="day" style="--c:var(--os)"><div class="d"><b>Qui 20</b>mai</div><div>
+      <h3>Universal Studios Japan <em>Parque</em></h3>
+      <ul><li>Dia de semana = filas menores. Express Pass com entrada no Super Nintendo World ★.</li>
+      <li>Chegar na abertura e sair no fim da tarde.</li></ul>
+      <span class="tag star">★ Express Pass USJ</span></div></div>
+
+    <div class="day" style="--c:var(--os)"><div class="d"><b>Sex 21</b>mai</div><div>
+      <h3>Osaka sem pressa · jantar de Kobe beef <em>Splurge #3</em></h3>
+      <ul><li>Manhã beliscando no Kuromon Market.</li>
+      <li>Castelo de Osaka, depois Shinsekai e a torre Tsutenkaku. Compras na Don Quijote.</li>
+      <li>Jantar de despedida: <b>Kobe Beef Steak Ken</b> ★, teppanyaki no balcão em Shinsaibashi, a poucos minutos a pé do hotel. Kobe beef certificado, curso recomendado ¥19.000 por pessoa.</li>
+      <li>Último izakaya em Dotonbori.</li></ul>
+      <span class="tag star">★ Steak Ken (reserva obrigatória)</span><span class="tag">Dica do amigo</span></div></div>
+
+    <div class="day" style="--c:var(--os)"><div class="d"><b>Sáb 22</b>mai</div><div>
+      <h3>Volta para casa <em>Viagem</em></h3>
+      <ul><li>Manhã livre, trem Haruka até o KIX, voo noturno da Emirates (chega dom 23, dia de descanso antes do trabalho).</li></ul></div></div>
+  </div>
+</section>
+
+<section id="comida">
+  <h2>Omakase & Kobe beef</h2>
+  <p class="lede">As três refeições especiais da viagem, e como garantir que são o que prometem.</p>
+  <div class="grid">
+    <div class="card" style="border-top:4px solid var(--tk)"><h4>🍣 Tóquio · qui 13 · jantar</h4><p>Sushi omakase no balcão em Ginza. Os mais famosos só aceitam reserva via hotel ou plataforma. Use Omakase.in, Tableall ou Pocket Concierge, ou peça ao concierge do hotel. Conta aproximada: ¥30–60 mil por pessoa.</p></div>
+    <div class="card" style="border-top:4px solid var(--ky)"><h4>🍣 Kyoto · seg 17 · jantar</h4><p>Segundo omakase, sushi ou kappo (chef cozinhando na sua frente com ingredientes da estação). Mesmo processo de reserva, e costuma ser um pouco mais fácil que Tóquio.</p></div>
+    <div class="card" style="border-top:4px solid var(--os)"><h4>🥩 Osaka · sex 21 · jantar</h4><p><b>Kobe Beef Steak Ken</b>, em Shinsaibashi (2F Nippo Fine Plaza). Indicação do amigo e membro autorizado a vender Kobe beef genuíno. Teppanyaki no balcão, curso recomendado ¥19.000 por pessoa (entrada, salada, carne, arroz com alho e sobremesa). Aberto das 16h às 22h30, fecha domingo, limite de 90 minutos. Reserva pelo TableCheck, telefone 06-6214-5656 ou concierge do hotel.</p></div>
+  </div>
+</section>
+
+<section id="prep">
+  <h2>Preparação & prazos</h2>
+  <p class="lede">Marque conforme for fazendo. Fica salvo no seu navegador, então cada um vê as próprias marcações. As datas são o prazo limite.</p>
+  <div class="progress"><div id="bar"></div></div>
+  <div id="phases">
+
+    <div class="phase"><div class="when">Agora → 15 out<small>2026</small></div><div class="items">
+      <label class="task"><input type="checkbox" data-id="dates"><div><span class="t">Fechar 7–22 mai com os dois empregos</span><span class="crit">CRÍTICO</span><div class="n">Rudy: ~10 dias úteis. Marcela: checar o calendário de varejo da Parfums de Marly.</div></div></label>
+      <label class="task"><input type="checkbox" data-id="passports" checked><div><span class="t">Passaportes válidos</span><div class="n">Os dois brasileiros vencem em dez/2029. OK.</div></div></label>
+    </div></div>
+
+    <div class="phase"><div class="when">Nov → Dez<small>2026</small></div><div class="items">
+      <label class="task"><input type="checkbox" data-id="flights"><div><span class="t">Comprar voos: DXB→ICN · Seul→Tóquio · KIX→DXB</span><span class="crit">CRÍTICO</span><div class="n">Emirates multi-destino nos trechos longos; Korean Air/JAL/ANA para GMP→HND.</div></div></label>
+      <label class="task"><input type="checkbox" data-id="ryokan"><div><span class="t">Reservar ryokan em Hakone (15 mai)</span><div class="n">Quartos com onsen privativo esgotam primeiro. Prefira cancelamento grátis.</div></div></label>
+      <label class="task"><input type="checkbox" data-id="hotels"><div><span class="t">Reservar hotéis (Seul, Shinjuku, Kyoto, Namba)</span><div class="n">Tarifas reembolsáveis; rever preços em março.</div></div></label>
+      <label class="task"><input type="checkbox" data-id="duncan-petsville"><div><span class="t">Reservar hospedagem do Duncan no Petsville DIP (7–23 mai)</span><span class="crit">CRÍTICO</span><div class="n">16 noites. O Eid al-Adha deve cair por volta de 16 mai/2027, e os hotéis de pet em Dubai lotam nessa época. Reservar logo depois de comprar os voos.</div></div></label>
+      <label class="task"><input type="checkbox" data-id="duncan-vacinas"><div><span class="t">Conferir as vacinas do Duncan para a data da estadia</span><div class="n">Pedir ao Petsville a lista exigida (normalmente raiva, polivalente e tosse dos canis) e checar se alguma vence antes de 23 mai.</div></div></label>
+    </div></div>
+
+    <div class="phase"><div class="when">Jan → Fev<small>2027</small></div><div class="items">
+      <label class="task"><input type="checkbox" data-id="keta"><div><span class="t">Solicitar K-ETA para a Coreia (os dois)</span><span class="crit">CRÍTICO</span><div class="n">O Brasil não está na lista de isenção temporária, que termina em 31/12/2026. Só pelo site oficial k-eta.go.kr · ~KRW 10.000 · válido 3 anos. Mínimo 72h antes, mas faça cedo.</div></div></label>
+      <label class="task"><input type="checkbox" data-id="japanrule"><div><span class="t">Reconfirmar a isenção de visto Brasil–Japão</span><div class="n">Prorrogada até 2029. Checagem de 2 minutos no site do MOFA.</div></div></label>
+    </div></div>
+
+    <div class="phase"><div class="when">Março<small>2027</small></div><div class="items">
+      <label class="task"><input type="checkbox" data-id="omakase-tk"><div><span class="t">Reservar omakase em Tóquio (13 mai)</span><span class="crit">CRÍTICO</span><div class="n">Abre 30–60 dias antes; alguns liberam no dia 1º do mês anterior. Colocar alarme.</div></div></label>
+      <label class="task"><input type="checkbox" data-id="omakase-ky"><div><span class="t">Reservar omakase em Kyoto (17 mai)</span></div></label>
+      <label class="task"><input type="checkbox" data-id="kobe"><div><span class="t">Reservar Kobe Beef Steak Ken (21 mai, jantar)</span><div class="n">TableCheck ou 06-6214-5656. Pedir lugar no balcão do teppanyaki.</div></div></label>
+      <label class="task"><input type="checkbox" data-id="usj"><div><span class="t">Comprar Express Pass da USJ (20 mai)</span><div class="n">Venda abre ~2–3 meses antes; a maioria inclui entrada no Nintendo World.</div></div></label>
+      <label class="task"><input type="checkbox" data-id="insurance"><div><span class="t">Seguro viagem para os dois</span><div class="n">Ver antes o que o cartão de crédito já cobre.</div></div></label>
+    </div></div>
+
+    <div class="phase"><div class="when">Abril<small>2027</small></div><div class="items">
+      <label class="task"><input type="checkbox" data-id="teamlab"><div><span class="t">Ingressos teamLab Planets (12 mai)</span></div></label>
+      <label class="task"><input type="checkbox" data-id="sky"><div><span class="t">Shibuya Sky no pôr do sol (14 mai)</span><div class="n">Liberado ~4 semanas antes (meados de abril); o horário do pôr do sol esgota rápido.</div></div></label>
+      <label class="task"><input type="checkbox" data-id="tea"><div><span class="t">Cerimônia do chá + aula de culinária em Kyoto</span></div></label>
+    </div></div>
+
+    <div class="phase"><div class="when">1–6 mai<small>última semana</small></div><div class="items">
+      <label class="task"><input type="checkbox" data-id="vjw"><div><span class="t">Visit Japan Web: cadastrar os dois e gerar os QR codes</span></div></label>
+      <label class="task"><input type="checkbox" data-id="esim"><div><span class="t">eSIM para Coreia e Japão</span></div></label>
+      <label class="task"><input type="checkbox" data-id="apps"><div><span class="t">Apps: Naver Map, Papago, Suica na Apple Wallet, Google Maps offline</span><div class="n">O Google Maps quase não funciona na Coreia, então o Naver é essencial.</div></div></label>
+      <label class="task"><input type="checkbox" data-id="cash"><div><span class="t">Dinheiro: um pouco de JPY e KRW, cartão de viagem, avisar os bancos</span></div></label>
+    </div></div>
+  </div>
+</section>
+
+<section id="docs">
+  <h2>Regras de entrada</h2>
+  <p class="lede">Situação em set/2026, passaporte brasileiro. Rever em jan/2027.</p>
+  <div class="tablewrap"><table>
+    <tr><th></th><th>🇰🇷 Coreia</th><th>🇯🇵 Japão</th></tr>
+    <tr><td><b>Visto</b></td><td><span class="ok">Não precisa</span> (até 90 dias)</td><td><span class="ok">Não precisa</span> (até 90 dias, isenção até 2029)</td></tr>
+    <tr><td><b>Autorização</b></td><td><span class="warn">K-ETA obrigatório</span></td><td><span class="ok">Nenhuma</span></td></tr>
+    <tr><td><b>Passaportes</b></td><td colspan="2"><span class="ok">Rudy e Marcela: válidos até dez/2029</span></td></tr>
+    <tr><td><b>Na chegada</b></td><td>Com K-ETA não precisa preencher o cartão de chegada</td><td>QR do Visit Japan Web na imigração e na alfândega</td></tr>
+  </table></div>
+</section>
+
+<section id="dicas">
+  <h2>Dicas práticas</h2>
+  <div class="grid">
+    <div class="card"><h4>🚄 Sem JR Pass</h4><p>Depois do aumento de 2023 não compensa para esta rota. Suica para trens locais; Shinkansen comprado por trecho no SmartEX.</p></div>
+    <div class="card"><h4>🧳 Mandar as malas</h4><p>Takkyubin do hotel de Tóquio direto para Kyoto (~¥2.500 por mala, entrega no dia seguinte). Só mochila para Hakone.</p></div>
+    <div class="card"><h4>🍙 Dicas do amigo</h4><ul><li>Tamago sando no 7-Eleven</li><li>Terraço de churrasco de Tsukiji + saquê</li><li>Chibo okonomiyaki e Osaka Tonkatsu</li><li>Rakeru (Shibuya)</li></ul></div>
+    <div class="card"><h4>💸 Pagamento</h4><p>Cartão funciona em quase tudo em Seul. No Japão também, mas izakayas pequenos e templos só aceitam dinheiro.</p></div>
+  </div>
+</section>
+
+<footer>Roteiro em rascunho · planos, preços e dias de funcionamento a confirmar antes de reservar.</footer>
+</div>
+<script>
+(function(){
+  var KEY='jk2027-prep';var s={};
+  try{s=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  var boxes=document.querySelectorAll('.task input');
+  function upd(){var d=0;boxes.forEach(function(b){b.closest('.task').classList.toggle('done',b.checked);if(b.checked)d++});
+    document.getElementById('bar').style.width=(d/boxes.length*100)+'%'}
+  boxes.forEach(function(b){b.checked=(b.dataset.id in s)?!!s[b.dataset.id]:b.defaultChecked;b.addEventListener('change',function(){s[b.dataset.id]=b.checked;
+    try{localStorage.setItem(KEY,JSON.stringify(s))}catch(e){}upd()})});
+  upd();
+})();
+</script>
+</body>
+</html>
